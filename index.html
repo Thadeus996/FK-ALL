@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资源分享</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #1a1a2e;
+            color: #fff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        section {
+            margin: 50px 0;
+        }
+        h2 {
+            color: #1a1a2e;
+            border-bottom: 2px solid #1a1a2e;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .resources {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .resource {
+            background-color: #e0e7ff;
+            padding: 20px;
+            border-radius: 5px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        .resource h3 {
+            margin-top: 0;
+        }
+        .resource a {
+            color: #1a1a2e;
+            text-decoration: none;
+        }
+        .resource a:hover {
+            text-decoration: underline;
+        }
+        .contact-form {
+            background-color: #e0e7ff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #1a1a2e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #0d0d1a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>资源分享平台</h1>
+            <p>分享有价值的资源，帮助更多的人。</p>
+        </header>
+        
+        <section class="resources">
+            <h2>资源列表</h2>
+            <div class="resource">
+                <h3>资源 1</h3>
+                <p>资源描述...</p>
+                <a href="资源链接">访问资源</a>
+            </div>
+            <div class="resource">
+                <h3>资源 2</h3>
+                <p>资源描述...</p>
+                <a href="资源链接">访问资源</a>
+            </div>
+            <div class="resource">
+                <h3>资源 3</h3>
+                <p>资源描述...</p>
+                <a href="资源链接">访问资源</a>
+            </div>
+            <!-- 更多资源可以按需添加 -->
+        </section>
+        
+        <section class="contact">
+            <h2>联系方式</h2>
+            <form class="contact-form">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">邮箱</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">留言</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">发送</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('表单已提交！');
+        });
+    </script>
+</body>
+</html>
